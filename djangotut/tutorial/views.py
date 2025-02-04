@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from .models import courseType
 
 # Create your views here.
 
 def all_tut(request):
-    return render(request, 'tutorial/all_tutorial.html')
+    courses = courseType.objects.all()
+    return render(request, 'tutorial/all_tutorial.html',{'courses': courses})
 

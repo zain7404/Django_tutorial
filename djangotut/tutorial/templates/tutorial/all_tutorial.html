@@ -1,9 +1,15 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block title%} Course Page {% endblock %} {% block content %}
+<h1>All Courses</h1>
+<div class="grid grid-cols-3 justify-center rounded-xl items-center gap-4 m-4">
+ {% for courses in courses %}
+ <div class="courses-type bg-blue-500 p-5">
+  <img class="mb-4" src="{{courses.image.url}}" alt="" />
+  <h2 class="text-black text-2xl">{{courses.name}}</h2>
+  <a href="#">
+   <button class = "bg-orange-600 h-[40px] w-[100%]" type = "button">{{courses.type}} - {{courses.id}}</button>
+  </a>
+ </div>
 
-{% block  title%}
-Course Page
-{% endblock %}
-
-{% block content %}
-    <h1>All Courses</h1>
+ {% endfor %}
+</div>
 {% endblock %}
