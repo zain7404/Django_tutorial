@@ -21,5 +21,7 @@ from .import views
 urlpatterns = [
     path('',views.all_tut, name = 'all_tut'),
     path('<int:course_id>/',views.detail, name = 'detail'),
+    path('course-stores/',views.courseStoreView, name = 'courseStore'),
+
 
 ]
