@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+ {% block title%} Course Detail Page {% endblock %}
+  {% block content %}
+<h1>Course Detail</h1>
+<div class="grid grid-cols-3 justify-center rounded-xl items-center gap-4 m-4">
+    <img class="mb-4" src="{{course.image.url}}" alt="" />
+    <h2>{{course.type}}</h2>
+    <h2></h2>
+    <h2>{{course.name}}</h2>
+
+</div>
+{% endblock %}

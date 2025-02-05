@@ -5,7 +5,7 @@
  <div class="courses-type bg-blue-500 p-5">
   <img class="mb-4" src="{{courses.image.url}}" alt="" />
   <h2 class="text-black text-2xl">{{courses.name}}</h2>
-  <a href="#">
+  <a href="{% url 'detail' courses.id %}">
    <button class = "bg-orange-600 h-[40px] w-[100%]" type = "button">{{courses.type}} - {{courses.id}}</button>
   </a>
  </div>
